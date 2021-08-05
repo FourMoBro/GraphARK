@@ -1,0 +1,17 @@
+neo4j
+py2neo
+
+psycopg2-binary
+requests
+asyncpg
+aiohttp
+redis
+
+SQLAlchemy
+python-dotenv
+
+alpha_vantage
+finnhub-python
+pyEX
+polygon-api-client
+alpaca_trade_api

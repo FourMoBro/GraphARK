@@ -24,3 +24,13 @@ services:
             - 5050:80
         depends_on:
             - timescale
+    
+    jupyterlab:
+        container_name: jupyter_gark
+        env_file:
+            - .env
+        build: ./notebooks
+        ports:
+            - "8888:8888"
+        volumes:
+            - ./notebooks:/home/jovyan/work
