@@ -1,0 +1,8 @@
+/venv
+.env*
+/dbs
+node_modules/
+.ipynb_checkpoints
+config.py
+__pycache__
+pg-database/
