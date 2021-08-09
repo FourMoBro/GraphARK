@@ -6,7 +6,7 @@ on:
       - .github/workflows/ARK.yml
   workflow_dispatch:
   schedule:
-    - cron: '1 2 1 * *'
+    - cron: '0 1 * * *'
     
 jobs:
   scheduled:
@@ -15,10 +15,10 @@ jobs:
       - name: Check out repo
         uses: actions/checkout@v2
       - name: Fetch all symbols 
-        uses: githubocto/flat@v2
+        uses: githubocto/flat@v3
         with:   
           http_url: https://ark-funds.com/wp-content/fundsiteliterature/csv/ARK_INNOVATION_ETF_ARKK_HOLDINGS.csv
           downloaded_filename: ARKK.csv
-          
+
       
             
