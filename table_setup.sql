@@ -17,6 +17,16 @@ CREATE TABLE holdings_sql (
     CONSTRAINT fk_holding FOREIGN KEY (holding_id) REFERENCES stock_sql (id)
 )
 
+CREATE TABLE dividend_sql (
+    stock_id INTEGER NOT NULL,
+    exDate DATE NOT NULL,
+    paymentDate DATE NOT NULL,
+    recordDate DATE NOT NULL,
+    amount NUMERIC (4, 2) NOT NULL,
+    PRIMARY KEY (stock_id, paymentDate),
+    CONSTRAINT fk_stock FOREIGN KEY (stock_id) REFERENCES stock_sql (id)
+)
+
 CREATE TABLE stock_price_sql (
     stock_id INTEGER NOT NULL,
     dt TIMESTAMP WITHOUT TIME ZONE NOT NULL,
@@ -28,3 +38,4 @@ CREATE TABLE stock_price_sql (
     PRIMARY KEY (stock_id, dt),
     CONSTRAINT fk_stock FOREIGN KEY (stock_id) REFERENCES stock_sql (id)
 )
+
