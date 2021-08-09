@@ -14,7 +14,7 @@ jobs:
     steps:
       - name: Check out repo
         uses: actions/checkout@v2
-      - name: Fetch all symbols 
+      - name: Get ARRK csv
         uses: githubocto/flat@v3
         with:   
           http_url: https://ark-funds.com/wp-content/fundsiteliterature/csv/ARK_INNOVATION_ETF_ARKK_HOLDINGS.csv

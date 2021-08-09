@@ -1,0 +1,17 @@
+CREATE CONSTRAINT UniqueStock on (t:Ticker) ASSERT t.id is UNIQUE
+CREATE CONSTRAINT UniqueFund on (t:Fund) ASSERT t.id is UNIQUE
+CREATE INDEX UniqueHolding FOR (h:Holding) ON (h.fund, h.date, h.ticker)
+
+
+
+
+LOAD CSV WITH HEADERS FROM "https://raw.githubusercontent.com/FourMoBro/GraphARK/main/.github/workflows/PRNT.csv" AS row
+WITH row WHERE row.ticker IS NOT NULL
+MERGE (f:Fund {id:row.fund})
+MERGE (t:Ticker {id:row.ticker})
+MERGE (h:Holding {ticker:row.ticker, date:row.date, fund:row.fund})
+MERGE (f)-[:HAS_HOLDING]->(h)-[:OF_TICKER]->(t)
+SET h.shares = row.shares,
+h.weight = row.`weight(%)`,
+h.value = row.`market value($)`,
+t.name = row.company
