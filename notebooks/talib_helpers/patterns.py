@@ -1,4 +1,4 @@
-patterns = {'CDL2CROWS':'Two Crows',
+cdl_patterns = {'CDL2CROWS':'Two Crows',
     'CDL3BLACKCROWS':'Three Black Crows',
     'CDL3INSIDE':'Three Inside Up/Down',
     'CDL3LINESTRIKE':'Three-Line Strike',
@@ -58,5 +58,5 @@ patterns = {'CDL2CROWS':'Two Crows',
     'CDLTRISTAR':'Tristar Pattern',
     'CDLUNIQUE3RIVER':'Unique 3 River',
     'CDLUPSIDEGAP2CROWS':'Upside Gap Two Crows',
-    'CDLXSIDEGAP3METHODS':'Upside/Downside Gap Three Methods
+    'CDLXSIDEGAP3METHODS':'Upside/Downside Gap Three Methods'
 }
