@@ -16,3 +16,4 @@ pyEX
 polygon-api-client
 alpaca_trade_api
 yfinance
+TA-Lib
