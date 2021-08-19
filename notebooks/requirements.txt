@@ -15,5 +15,8 @@ finnhub-python
 pyEX
 polygon-api-client
 alpaca_trade_api
+
 yfinance
-TA-Lib
+
+pyalgotrade
+pandas-market-calendars

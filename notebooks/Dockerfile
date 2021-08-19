@@ -3,6 +3,7 @@ FROM jupyter/datascience-notebook
 COPY requirements.txt ./
 RUN pip install -U pip
 RUN pip install --no-cache-dir -r requirements.txt
+RUN conda install -c conda-forge ta-lib
 
 ENV JUPYTER_ENABLE_LAB=yes
 
