@@ -30,6 +30,10 @@ fileConfig(config.config_file_name)
 from app import models
 target_metadata = models.Base.metadata
 
+from app.sql_model_example import unified
+target_metadata = unified.Stock2Create.metadata
+
+
 # other values from the config, defined by the needs of env.py,
 # can be acquired:
 # my_important_option = config.get_main_option("my_important_option")
