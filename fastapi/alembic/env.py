@@ -27,8 +27,8 @@ fileConfig(config.config_file_name)
 # for 'autogenerate' support
 # from myapp import mymodel
 # target_metadata = mymodel.Base.metadata
-from app import models
-target_metadata = models.Base.metadata
+from app import pg_models
+target_metadata = pg_models.Base.metadata
 
 from app.sql_model_example import unified
 target_metadata = unified.Stock2Create.metadata

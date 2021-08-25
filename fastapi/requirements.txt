@@ -7,4 +7,6 @@ psycopg2-binary
 python-dotenv
 alembic
 graphene
+motor
+python-multipart
 sqlmodel
