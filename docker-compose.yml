@@ -49,28 +49,28 @@ services:
             - timescale
         restart: always
 
-    # mongodb:
-    #     container_name: mongodb_gark
-    #     image: mongo:5.0.2
-    #     volumes:
-    #     - ./mongo_database:/data/db
-    #     ports:
-    #     - "27017:27017"
-    #     environment:
-    #     - MONGO_INITDB_ROOT_USERNAME=${MONGO_INITDB_ROOT_USERNAME}
-    #     - MONGO_INITDB_ROOT_PASSWORD=${MONGO_INITDB_ROOT_PASSWORD}
-    #     - MONGO_INITDB_DATABASE=${MONGO_INITDB_DATABASE}
-    #     restart: 
-    #         always
-    # mongoexpress:
-    #     image: mongo-express
-    #     container_name: mongoexp_gark
-    #     ports:
-    #         - "8081:8081"
-    #     links:
-    #         - mongodb
-    #     environment: 
-    #         - ME_CONFIG_MONGODB_URL=mongodb://mongo:27017
+    mongodb:
+        container_name: mongodb_gark
+        image: mongo:5.0.2
+        volumes:
+        - ./mongo-database:/data/db
+        ports:
+        - "27017:27017"
+        environment:
+        - MONGO_INITDB_ROOT_USERNAME=${MONGO_INITDB_ROOT_USERNAME}
+        - MONGO_INITDB_ROOT_PASSWORD=${MONGO_INITDB_ROOT_PASSWORD}
+        - MONGO_INITDB_DATABASE=${MONGO_INITDB_DATABASE}
+        restart: 
+            always
+    mongoexpress:
+        image: mongo-express
+        container_name: mongoexp_gark
+        ports:
+            - "8081:8081"
+        links:
+            - mongodb
+        environment: 
+            - ME_CONFIG_MONGODB_URL=mongodb://mongo:27017
 
     # neo4j:
     #     container_name: neo4j_gark
