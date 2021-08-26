@@ -1,6 +1,6 @@
 from sqlalchemy import Boolean, Column, ForeignKey, Integer, String
 from sqlalchemy.orm import relationship
-from .pg_database import Base
+from ..dbconfig.pg_sqla import Base
 
 class Stock(Base):
     __tablename__ = "stocks"
