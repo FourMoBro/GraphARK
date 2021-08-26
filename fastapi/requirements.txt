@@ -10,3 +10,5 @@ graphene
 motor
 python-multipart
 sqlmodel
+py2neo
+neo4j
