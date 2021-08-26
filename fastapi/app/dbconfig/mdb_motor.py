@@ -1,4 +1,3 @@
-import motor.motor_asyncio
+from motor.motor_asyncio import AsyncIOMotorClient
 
-client = motor.motor.asyncio.AsyncIOMotorClient('mongodb://localhost:27017/')
-database = client.
+client = AsyncIOMotorClient('mongodb://root:example@mongodb:27017/')

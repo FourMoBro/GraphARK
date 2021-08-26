@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from .routes import stock
+from .routes import stock, todo
 
 
 #SQLModel test
@@ -13,6 +13,7 @@ from .routes import stock
 app = FastAPI()
 
 app.include_router(stock.router)
+app.include_router(todo.router)
 
 @app.get("/")
 def get_root():
